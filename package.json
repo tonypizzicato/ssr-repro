@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run ssr-repro:serve-ssr",
+    "serve:ssr": "node dist/ssr-repro/server/main.js",
+    "build:ssr": "ng build --prod && ng run ssr-repro:server:production",
+    "prerender": "ng run ssr-repro:prerender"
   },
   "private": true,
   "dependencies": {
@@ -18,8 +22,12 @@
     "@angular/forms": "~9.1.4",
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
+    "@angular/platform-server": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "@nguniversal/express-engine": "^9.1.1",
+    "express": "^4.15.2",
     "rxjs": "~6.5.4",
+    "stencil-repro": "file:../stencil-repro",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
@@ -28,6 +36,8 @@
     "@angular/cli": "~9.1.4",
     "@angular/compiler-cli": "~9.1.4",
     "@angular/language-service": "~9.1.4",
+    "@nguniversal/builders": "^9.1.1",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
