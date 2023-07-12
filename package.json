@@ -25,7 +25,7 @@
     "@angular/platform-server": "~9.1.4",
     "@angular/router": "~9.1.4",
     "@nguniversal/express-engine": "^9.1.1",
-    "express": "^4.15.2",
+    "express": "^4.18.2",
     "rxjs": "~6.5.4",
     "stencil-repro": "git@github.com:tonypizzicato/stencil-repro.git",
     "tslib": "^1.10.0",
